@@ -1,0 +1,23 @@
+body{
+
+    background-color: thistle;
+    font-family: sans-serif;
+    margin:0px;
+}
+
+.divisions{
+ display: flex;
+ flex-wrap: wrap;
+ width: 340;
+ margin:auto ;
+ background-color: red;
+}
+
+
+.sqr{
+width: 10%;
+aspect-ratio: 4/4;
+border:2px solid black;
+text-align: center;
+font-size: 64px;
+}
