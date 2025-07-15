@@ -1,17 +1,19 @@
 function init() {
     const cardElem = document.querySelectorAll(".memory-card")
     const timerElm = document.querySelector("#timer")
-    const messageElm = document.querySelector(".message")
     const openBtn = document.querySelector(".tutorial")
     const closeBtn = document.querySelector(".model .model-inner button")
     const modalElm = document.querySelector(".model")
     const modelElm = document.querySelector(".model-overlay")
+    const modelElm2 = document.querySelector(".model-overlay-2")
+    const restElm = document.querySelector(".restart")
+    const restElm2 = document.querySelector(".restart-2")
 
     let Flipped = false;
     let firstCard, secondCard;
     let blocked = false;
     let matches = 0;
-    let timer = 40;
+    let timer = 200000000;
     let interval;
     let win = 0;
 
@@ -86,6 +88,17 @@ closeBtn.addEventListener('click', () => {
         modalElm.classList.remove("open");
 })
 
+restElm.addEventListener('click', ()=>{
+
+    location.reload();
+    
+})
+restElm2.addEventListener('click', ()=>{
+
+    location.reload();
+})
+
+
 function timers() {
         interval = setInterval(() => {
             timer--
@@ -107,10 +120,7 @@ function timers() {
  function winningCondition(){
     if (win === 6){
     console.log("You win")
-
-        return modelElm.style.display ='flex'
-        
-
+        return modelElm.style.display ='flex';
     }
 
  }
@@ -119,13 +129,11 @@ function timers() {
 
     if(timer === 0){
         console.log("You lose")
-        return false;
+        return modelElm2.style.display ='flex';
     }
 
 
  }
-
-
 
     timers()
 
