@@ -2,9 +2,10 @@ function init() {
     const cardElem = document.querySelectorAll(".memory-card")
     const timerElm = document.querySelector("#timer")
     const messageElm = document.querySelector(".message")
-    const openBtn = document.getElementById("openModal")
-    const closeBtn = document.getElementById("closeModal")
-    const modalElm = document.getElementById("modal")
+    const openBtn = document.querySelector(".tutorial")
+    const closeBtn = document.querySelector(".model .model-inner button")
+    const modalElm = document.querySelector(".model")
+    const modelElm = document.querySelector(".model-overlay")
 
     let Flipped = false;
     let firstCard, secondCard;
@@ -12,6 +13,7 @@ function init() {
     let matches = 0;
     let timer = 40;
     let interval;
+    let win = 0;
 
 
 
@@ -25,7 +27,7 @@ function flipCard() {
             console.log(firstCard)
             Flipped = true;
             firstCard = this;
-            // timers()
+        
             return;
         }
 
@@ -35,9 +37,6 @@ function flipCard() {
 
         matching()
  }
-    // console.log(firstCard.dataset.framework)
-    // console.log(secondCard.dataset.framework)
-
 
 function matching() {
         console.log("matching function called")
@@ -46,6 +45,11 @@ function matching() {
         let match = firstCard.dataset.framework === secondCard.dataset.framework;
         console.log(match)
         match ? disableCard() : dontFlip(), matches++;
+
+        if(match === true){
+            win++
+        }
+        winningCondition()
 
 }
 
@@ -74,11 +78,11 @@ cardElem.forEach(card => {
         card.addEventListener('click', flipCard)
 });
 
-openBtn.addEventListener("click", () => {
+openBtn.addEventListener('click', () => {
         modalElm.classList.add("open");
 })
 
-closeBtn.addEventListener("click", () => {
+closeBtn.addEventListener('click', () => {
         modalElm.classList.remove("open");
 })
 
@@ -90,10 +94,7 @@ function timers() {
             if (timer === 0) {
                 stopWatch()
             }
-            // if(timerElm.textContent === || matches!==6){
-            //     clearInterval(interval)
-            //     messageElm.textContent = 'Time is up loser!'
-            // }
+            losingCondition()
         }, 1000)
 }
 
@@ -103,13 +104,29 @@ function timers() {
  }
 
 
+ function winningCondition(){
+    if (win === 6){
+    console.log("You win")
+
+        return modelElm.style.display ='flex'
+        
+
+    }
+
+ }
+
+ function losingCondition(){
+
+    if(timer === 0){
+        console.log("You lose")
+        return false;
+    }
 
 
-    // if (timer === 0){
+ }
 
-    //                 messageElm.textContent = 'Time is up loser!'
-    //                 console.log(timers)
-    //             }
+
+
     timers()
 
 }
