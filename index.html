@@ -1,44 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="scripts/main.css">
-    <script  src="scripts/app.js"></script>
+    <script src="scripts/app.js"></script>
 </head>
-<body class="Board">
-    <h1>Memory Game</h1>
-    <h2>One piece edition</h2>
 
-<section class="divisions">
-    <div class="front-sqr"  id="0"></div>
-    <div class="front-sqr"  id="1"></div>
-    <div class="front-sqr"  id="2"></div>
-    <div class="front-sqr"  id="3"></div>
-    <div class="front-sqr"  id="4"></div>
-    <div class="front-sqr"  id="5"></div>
-    <div class="front-sqr"  id="6"></div>
-    <div class="front-sqr"  id="7"></div>
-    <div class="front-sqr"  id="8"></div>
-    <div class="front-sqr"  id="9"></div>
-    <div class="front-sqr"  id="10"></div>
-    <div class="front-sqr"  id="11"></div>
+<body>
+    <div class="Board">
+        <h1>Memory Game</h1>
+        <h2>One piece edition</h2>
+        <div>
+            <h3>Timer: </h3>
+            <p id="timer">40</p>
+        </div>
+    </div>
 
-    <div class="back-sqr"  id="0"></div>
-    <div class="back-sqr"  id="1"></div>
-    <div class="back-sqr"  id="2"></div>
-    <div class="back-sqr"  id="3"></div>
-    <div class="back-sqr"  id="4"></div>
-    <div class="back-sqr"  id="5"></div>
-    <div class="back-sqr"  id="6"></div>
-    <div class="back-sqr"  id="7"></div>
-    <div class="back-sqr"  id="8"></div>
-    <div class="back-sqr"  id="9"></div>
-    <div class="back-sqr"  id="10"></div>
-    <div class="back-sqr"  id="11"></div>
-</section>
+    <button id="Tutorial">Click Me</button>
+    <div class="model" id="model">
+        <div class="model-inner">
+            <h2> Cool Tutorial </h2>
+            <p>
+                Here is a tutotial to help you play the game😁
+
+                Step-by-Step instructions:
+                1. Strat the Game
+                 ▪️The game begins with all cards face down.
+                 ▪️there are 12 cards total (6 pairs).
+
+                2. Flip Two Cards
+                 ▪️Click on any two cards to flip them face up.
+                 ▪️Try to remember their positions and images.
+
+                3. Check for a match 
+                 ▪️if the cards match, they stay face up.
+                 ▪️if they dont match, they flip back. 
+
+                4. Win the Game
+                 ▪️Match all 6 pairs to win!
+                 ▪️The game ends once all pairs are found.
+                 ▪️if you run out of time you will Lose!
+
+                Good luck winning the game🫡
+
+
+            </p>
+            <button id="closeModel>">Close</button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <section class="Deck-of-Cards">
+        <div class="memory-card" data-framework="Zoro">
+            <img class="front-face" src="https://i.pinimg.com/474x/94/9c/0b/949c0b284a98760faee98702527493fb.jpg" ,
+                alt="cover">
+            <img class="back-face" src="https://i.pinimg.com/736x/88/2d/0d/882d0d73843a71f0f01ffde4fc746a10.jpg"
+                alt="Zoro">
+        </div>
+        <div class="memory-card" data-framework="Zoro">
+            <img class="front-face" src="https://i.pinimg.com/474x/94/9c/0b/949c0b284a98760faee98702527493fb.jpg"
+                alt="cover">
+            <img class="back-face" src="https://i.pinimg.com/736x/88/2d/0d/882d0d73843a71f0f01ffde4fc746a10.jpg"
+                alt="Zoro">
+        </div>
+        <div class="memory-card" data-framework="Luffy">
+            <img class="front-face" src="https://i.pinimg.com/236x/d8/ac/1a/d8ac1a76b40b4a7cf617571118075eb1.jpg"
+                alt="cover">
+            <img class="back-face" src="https://i.pinimg.com/736x/88/2d/0d/882d0d73843a71f0f01ffde4fc746a10.jpg"
+                alt="Luffy">
+        </div>
+        <div class="memory-card" data-framework="Luffy">
+            <img class="front-face" src="https://i.pinimg.com/236x/d8/ac/1a/d8ac1a76b40b4a7cf617571118075eb1.jpg"
+                alt="cover">
+            <img class="back-face" src="https://i.pinimg.com/736x/88/2d/0d/882d0d73843a71f0f01ffde4fc746a10.jpg"
+                alt="Luffy">
+        </div>
+        <div class="memory-card" data-framework="Kaido">
+            <img class="front-face" src="https://i.pinimg.com/474x/51/d7/73/51d773ca1b48d9a4dbfa992c946799b8.jpg"
+                alt="cover">
+            <img class="back-face" src="https://i.pinimg.com/736x/88/2d/0d/882d0d73843a71f0f01ffde4fc746a10.jpg"
+                alt="Kaido">
+        </div>
+        <div class="memory-card" data-framework="Kaido">
+            <img class="front-face" src="https://i.pinimg.com/474x/51/d7/73/51d773ca1b48d9a4dbfa992c946799b8.jpg"
+                alt="cover">
+            <img class="back-face" src="https://i.pinimg.com/736x/88/2d/0d/882d0d73843a71f0f01ffde4fc746a10.jpg"
+                alt="Kaido">
+        </div>
+        <div class="memory-card" data-framework="WhiteBeard">
+            <img class="front-face"
+                src="https://www.kindpng.com/picc/m/135-1350204_edward-whitebeard-newgate-from-one-piece-white-beard.png"
+                alt="cover">
+            <img class="back-face" src="https://i.pinimg.com/736x/88/2d/0d/882d0d73843a71f0f01ffde4fc746a10.jpg"
+                alt="WhiteBeard">
+        </div>
+        <div class="memory-card" data-framework="WhiteBeard">
+            <img class="front-face"
+                src="https://www.kindpng.com/picc/m/135-1350204_edward-whitebeard-newgate-from-one-piece-white-beard.png"
+                alt="cover">
+            <img class="back-face" src="https://i.pinimg.com/736x/88/2d/0d/882d0d73843a71f0f01ffde4fc746a10.jpg"
+                alt="WhateBeard">
+        </div>
+        <div class="memory-card" data-framework="Mihawk">
+            <img class="front-face" src="https://i.pinimg.com/736x/2d/f8/7f/2df87f6db76e045f34a40384446696b0.jpg"
+                alt="cover">
+            <img class="back-face" src="https://i.pinimg.com/736x/88/2d/0d/882d0d73843a71f0f01ffde4fc746a10.jpg"
+                alt="Mihawk">
+        </div>
+        <div class="memory-card" data-framework="Mihawk">
+            <img class="front-face" src="https://i.pinimg.com/736x/2d/f8/7f/2df87f6db76e045f34a40384446696b0.jpg"
+                alt="cover">
+            <img class="back-face" src="https://i.pinimg.com/736x/88/2d/0d/882d0d73843a71f0f01ffde4fc746a10.jpg"
+                alt="Mihawk">
+        </div>
+        <div class="memory-card" data-framework="Shanks">
+            <img class="front-face"
+                src="https://cdn.shopify.com/s/files/1/0567/9402/2088/files/1040g00831ao27hig6m0g5n4v01ukkvdc04mfo3o_nd_dft_wlteh_webp_3_480x480.webp?v=1734836206"
+                alt="cover">
+            <img class="back-face" src="https://i.pinimg.com/736x/88/2d/0d/882d0d73843a71f0f01ffde4fc746a10.jpg"
+                alt="Shanks">
+        </div>
+        <div class="memory-card" data-framework="Shanks">
+            <img class="front-face"
+                src="https://cdn.shopify.com/s/files/1/0567/9402/2088/files/1040g00831ao27hig6m0g5n4v01ukkvdc04mfo3o_nd_dft_wlteh_webp_3_480x480.webp?v=1734836206"
+                alt="cover">
+            <img class="back-face" src="https://i.pinimg.com/736x/88/2d/0d/882d0d73843a71f0f01ffde4fc746a10.jpg"
+                alt="Shanks">
+        </div>
+
+
+
+
+
+
+    </section>
 
 
 </body>
+
 </html>
