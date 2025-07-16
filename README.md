@@ -82,5 +82,3 @@ This project is built entirely with **vanilla web technologies**, without any fr
 
 ---
 
-## 📂 Project Structure
-
