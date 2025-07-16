@@ -16,8 +16,10 @@ body {
     display: flex;
     background: #d3d7d8;
     background-image: url("https://wallpaperbat.com/img/78104363-one-piece-crew-hd-wallpaper.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+
 }
 
 h2,h3 {
@@ -26,7 +28,7 @@ h2,h3 {
 }
 
 .tutorial {
-    background-image: linear-gradient(45deg, #c514ed, #e74c3c, #c514ed);
+    background-image: linear-gradient(45deg, #49464a, #ffffff, #332f34);
     background-size: 200% auto;
     position: relative;
     box-shadow: 0px 0px 1px #e74c3c, 0px 0px 2px #e74c3c , 0px 0px 3px #e74c3c , 0px 0px 4px #e74c3c ,;
@@ -67,14 +69,15 @@ h2,h3 {
 
 
 .model-inner {
-    background-image: url(https://m.gettywallpapers.com/wp-content/uploads/2023/09/One-Piece-4k-Wallpaper-For-Desktop-scaled.jpg);
+    background-image: url(https://wallpapers-clan.com/wp-content/uploads/2023/11/one-piece-going-merry-ship-black-background.jpg);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
+    background-position: center;
     border-radius: 5px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     padding: 15px 25px;
-    /* width: 380px; */
 }
+
 
 .model.open {
     opacity: 1;
@@ -93,6 +96,7 @@ h2,h3 {
     margin: 10px 0;
     font-family: "Grenze Gotisch", serif;
     font-optical-sizing: auto;
+    color: rgb(255, 255, 255);
     /* font-weight:<weight>;
     font-style:normal; */
 }
@@ -149,23 +153,36 @@ h2,h3 {
     color: rgb(245, 245, 245);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     padding: 150px;
+}
+
+.Start{
+        border-radius: 4px;
+    border: 0;
+     box-shadow: 0px 0px 1px #e74c3c, 0px 0px 2px #e74c3c , 0px 0px 3px #e74c3c , 0px 0px 4px #e74c3c ,;
+    color: rgb(17, 16, 16);
+    background-image: linear-gradient(45deg, #3f3f3f, #ffffff, #484849);
+    cursor: pointer;
+    background-size: 200% auto;
+    position: relative;
+
 }
 
 
 .model .model-inner button {
     border-radius: 4px;
     border: 0;
-     box-shadow: 0px 0px 1px #e74c3c, 0px 0px 2px #e74c3c , 0px 0px 3px #e74c3c , 0px 0px 4px #e74c3c ,;
-    color: #fff;
-    background-image: linear-gradient(45deg, #c514ed, #e74c3c, #c514ed);
+    color: black;
+    background-image: linear-gradient(45deg, #646364, #ffffff, #4b484b);
     cursor: pointer;
     background-size: 200% auto;
     position: relative;
     box-shadow: 0px 0px 1px #e74c3c, 0px 0px 2px #e74c3c , 0px 0px 3px #e74c3c , 0px 0px 4px #e74c3c ,;
    
 }
+
+
 
 .model-overlay {
     display: none;
@@ -202,8 +219,8 @@ h2,h3 {
     border-radius: 4px;
     border: 0;
      box-shadow: 0px 0px 1px #e74c3c, 0px 0px 2px #e74c3c , 0px 0px 3px #e74c3c , 0px 0px 4px #e74c3c ,;
-    color: #fff;
-    background-image: linear-gradient(45deg, #c514ed, #e74c3c, #c514ed);
+    color: black;
+    background-image: linear-gradient(45deg, #3f3f3f, #ffffff, #484849);
     cursor: pointer;
     background-size: 200% auto;
     position: relative;
@@ -250,3 +267,6 @@ h2,h3 {
     background-image: linear-gradient(to right, #0300c3, #fc1a1a);
 
 }
+
+
+

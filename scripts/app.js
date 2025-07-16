@@ -8,12 +8,13 @@ function init() {
     const modelElm2 = document.querySelector(".model-overlay-2")
     const restElm = document.querySelector(".restart")
     const restElm2 = document.querySelector(".restart-2")
+    const StartElem = document.querySelector(".Start")
 
     let Flipped = false;
     let firstCard, secondCard;
     let blocked = false;
     let matches = 0;
-    let timer = 200000000;
+    let timer = 40;
     let interval;
     let win = 0;
 
@@ -26,7 +27,7 @@ function flipCard() {
         this.classList.add('flip');
 
         if (!Flipped) {
-            console.log(firstCard)
+            // console.log(firstCard)
             Flipped = true;
             firstCard = this;
         
@@ -35,17 +36,17 @@ function flipCard() {
 
         Flipped = false;
         secondCard = this;
-        console.log(secondCard)
+        // console.log(secondCard)
 
         matching()
  }
 
 function matching() {
-        console.log("matching function called")
-        console.log(firstCard.dataset.framework)
-        console.log(secondCard.dataset.framework)
+        // console.log("matching function called")
+        // console.log(firstCard.dataset.framework)
+        // console.log(secondCard.dataset.framework)
         let match = firstCard.dataset.framework === secondCard.dataset.framework;
-        console.log(match)
+        // console.log(match)
         match ? disableCard() : dontFlip(), matches++;
 
         if(match === true){
@@ -75,11 +76,6 @@ function dontFlip() {
 })();
 
 
-
-cardElem.forEach(card => {
-        card.addEventListener('click', flipCard)
-});
-
 openBtn.addEventListener('click', () => {
         modalElm.classList.add("open");
 })
@@ -93,17 +89,27 @@ restElm.addEventListener('click', ()=>{
     location.reload();
     
 })
+
 restElm2.addEventListener('click', ()=>{
 
     location.reload();
 })
+
+StartElem.addEventListener('click', ()=>{
+    timers();
+    cardElem.forEach(card => {
+    card.addEventListener('click', flipCard)
+});
+
+})
+
 
 
 function timers() {
         interval = setInterval(() => {
             timer--
             timerElm.textContent = timer
-            console.log()
+            // console.log()
             if (timer === 0) {
                 stopWatch()
             }
@@ -116,10 +122,9 @@ function timers() {
 
  }
 
-
  function winningCondition(){
     if (win === 6){
-    console.log("You win")
+    // console.log("You win")
         return modelElm.style.display ='flex';
     }
 
@@ -128,14 +133,10 @@ function timers() {
  function losingCondition(){
 
     if(timer === 0){
-        console.log("You lose")
+        // console.log("You lose")
         return modelElm2.style.display ='flex';
     }
-
-
  }
-
-    timers()
 
 }
 document.addEventListener('DOMContentLoaded', init)
