@@ -14,43 +14,37 @@ function init() {
     let firstCard, secondCard;
     let blocked = false;
     let matches = 0;
-    let timer = 40;
+    let timer = 20;
     let interval;
     let win = 0;
 
 
 
 function flipCard() {
-        if (blocked) return;
 
+ if (blocked) return;
 
-        this.classList.add('flip');
+ this.classList.add('flip');
 
-        if (!Flipped) {
-            // console.log(firstCard)
-            Flipped = true;
-            firstCard = this;
-        
-            return;
-        }
+ if (!Flipped) {
+     Flipped = true;
+     firstCard = this;
+    
+     return;
+    }  
+    Flipped = false;
+    secondCard = this;
 
-        Flipped = false;
-        secondCard = this;
-        // console.log(secondCard)
-
-        matching()
+    matching()
  }
 
 function matching() {
-        // console.log("matching function called")
-        // console.log(firstCard.dataset.framework)
-        // console.log(secondCard.dataset.framework)
-        let match = firstCard.dataset.framework === secondCard.dataset.framework;
-        // console.log(match)
-        match ? disableCard() : dontFlip(), matches++;
 
-        if(match === true){
-            win++
+    let match = firstCard.dataset.framework === secondCard.dataset.framework;
+    match ? disableCard() : dontFlip(), matches++;
+
+    if(match === true){
+         win++
         }
         winningCondition()
 
@@ -70,8 +64,8 @@ function dontFlip() {
 
 (function shuffle() {
         cardElem.forEach(card => {
-            let randomize = Math.floor(Math.random() * 12);
-            card.style.order = randomize;
+        let randomize = Math.floor(Math.random() * 12);
+        card.style.order = randomize;
         });
 })();
 
@@ -86,13 +80,13 @@ closeBtn.addEventListener('click', () => {
 
 restElm.addEventListener('click', ()=>{
 
-    location.reload();
+        location.reload();
     
 })
 
 restElm2.addEventListener('click', ()=>{
 
-    location.reload();
+        location.reload();
 })
 
 StartElem.addEventListener('click', ()=>{
@@ -106,26 +100,24 @@ StartElem.addEventListener('click', ()=>{
 
 
 function timers() {
-        interval = setInterval(() => {
-            timer--
-            timerElm.textContent = timer
-            // console.log()
-            if (timer === 0) {
-                stopWatch()
+    interval = setInterval(() => {
+    timer--
+    timerElm.textContent = timer
+    if (timer === 0) {
+         stopWatch()
             }
-            losingCondition()
+         losingCondition()
         }, 1000)
 }
 
  function stopWatch() {
-        clearInterval(interval);
+    clearInterval(interval);
 
  }
 
  function winningCondition(){
     if (win === 6){
-    // console.log("You win")
-        return modelElm.style.display ='flex';
+    return modelElm.style.display ='flex';
     }
 
  }
@@ -133,8 +125,7 @@ function timers() {
  function losingCondition(){
 
     if(timer === 0){
-        // console.log("You lose")
-        return modelElm2.style.display ='flex';
+    return modelElm2.style.display ='flex';
     }
  }
 
